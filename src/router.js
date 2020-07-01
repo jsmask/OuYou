@@ -1,10 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+
+const Home = () => import('./views/Home.vue');
+const Circle = () => import('./views/Circle.vue');
+const Spotlight = () => import('./views/Spotlight.vue');
+const Turncard = () => import('./views/Turncard.vue');
+
 
 Vue.use(Router)
 
-export default new Router({
+let router = new Router({
   routes: [
     {
       path: '/',
@@ -12,12 +17,35 @@ export default new Router({
       component: Home
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: '/circle',
+      name: 'circle',
+      meta: { title:"圆环倒计时" },
+      component: Circle
+    },
+    {
+      path: '/spotlight',
+      name: 'spotlight',
+      meta: { title:"聚光灯效果" },
+      component: Spotlight
+    },
+    {
+      path: '/turncard',
+      name: 'turncard',
+      meta: { title:"翻牌效果" },
+      component: Turncard
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.title) {
+    document.title = to.meta.title;
+  }
+  else{
+    document.title = "欧呦Mask";
+  }
+  next()
+})
+
+
+export default router

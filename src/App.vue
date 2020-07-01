@@ -1,31 +1,40 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <a-layout>
+      <a-layout-header>
+        <m-header />
+      </a-layout-header>
+      <a-layout-content>
+        <router-view />
+      </a-layout-content>
+    </a-layout>
   </div>
 </template>
 
-<style>
+<script>
+import Header from "./components/Header"
+export default {
+  data() {
+    return {};
+  },
+  components: {
+    [Header.name]:Header
+  },
+  mounted() {
+  },
+};
+</script>
+
+<style scoped>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  width: 100%;
+  min-height: 100%;
 }
-#nav {
-  padding: 30px;
+.ant-layout{
+  background: #fff;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.ant-layout-content{
+  height: calc(100vh - 64px);
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

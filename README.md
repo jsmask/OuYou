@@ -1,16 +1,4 @@
-# 40
+# 欧呦Mask
 
-## Project setup
-```
-npm install
-```
+##### 持续更新中...
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
