@@ -3,7 +3,7 @@
     <ul>
       <li v-for="(item,index) in cardList" :key="index" @click.stop="onLink(item)">
         <a-card hoverable style="width: 150px;border-radius: 10px;">
-          <img slot="cover" :src="item.pic" />
+          <img slot="cover" :src="item.pic" style="width: 150px;height:150px;" />
           <a-card-meta :title="item.title">
             <template slot="description">{{item.msg}}</template>
           </a-card-meta>
@@ -37,6 +37,17 @@ export default {
           title: "翻牌效果",
           msg: "css",
           path: "/turncard"
+        },{
+          pic:"http://static.gamemm.com/upload/avatar/202003/24/31496_1585013160.jpg",
+          title: "滚动计数器",
+          msg: "css js",
+          path: "/counter"
+        },
+        {
+          pic:"http://static.gamemm.com/upload/avatar/201908/22/87756_1566450714.jpg",
+          title:"打勾效果",
+          msg: "svg css",
+          path:'/tick'
         }
       ]
     };

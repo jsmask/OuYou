@@ -60,7 +60,7 @@ export default {
     }
   },
   mounted() {
-    console.log(this.$store.title)
+    console.log(this.$store.title);
   },
   methods: {
     run() {

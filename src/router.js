@@ -5,6 +5,8 @@ const Home = () => import('./views/Home.vue');
 const Circle = () => import('./views/Circle.vue');
 const Spotlight = () => import('./views/Spotlight.vue');
 const Turncard = () => import('./views/Turncard.vue');
+const Counter = () => import('./views/Counter.vue');
+const Tick = () => import('./views/Tick.vue');
 
 
 Vue.use(Router)
@@ -33,6 +35,17 @@ let router = new Router({
       name: 'turncard',
       meta: { title:"翻牌效果" },
       component: Turncard
+    },
+    {
+      path: '/counter',
+      name: 'counter',
+      meta: { title:"滚动计数器" },
+      component: Counter
+    },{
+      path:'/tick',
+      name:"tick",
+      meta:{title:"打勾效果"},
+      component:Tick
     }
   ]
 })

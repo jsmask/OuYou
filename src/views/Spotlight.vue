@@ -21,6 +21,7 @@ export default {
   padding: 120px 0;
   text-align: center;
   background: #333;
+  overflow: hidden;
 }
 .spot-word{
   font-size:80px;
@@ -31,6 +32,7 @@ export default {
   letter-spacing: 6px;
   height: 120px;
   display: inline-block;
+  font-weight: bolder;
 }
 .spot-word::after{
   content:attr(data-txt);
@@ -48,6 +50,7 @@ export default {
   background-size: 150%;
   background-position: center center;
   background-clip: text;
+  font-weight: bolder;
 }
 
 @keyframes spotlight {
