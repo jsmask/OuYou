@@ -137,8 +137,8 @@ export default {
   --z: 1px;
   --rx: 60deg;
   --ry: 0deg;
-  --r: -5deg;
-  --x: 0px;
+  --r: -15deg;
+  --x: -15px;
   --y: -30px;
   transform: rotateX(var(--rx)) rotate(var(--r)) rotateY(var(--ry))
     translateX(var(--x)) translateY(var(--y)) translateZ(var(--z));
