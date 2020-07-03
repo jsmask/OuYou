@@ -3,7 +3,7 @@
     <ul>
       <li v-for="(item,index) in cardList" :key="index" @click.stop="onLink(item)">
         <a-card hoverable style="width: 150px;border-radius: 10px;">
-          <img slot="cover" :src="item.pic" style="width: 150px;height:150px;" />
+          <img slot="cover" :src="item.pic" class="card-img" />
           <a-card-meta :title="item.title">
             <template slot="description">{{item.msg}}</template>
           </a-card-meta>
@@ -48,8 +48,13 @@ export default {
           title:"打勾效果",
           msg: "svg css",
           path:'/tick'
-        }
-      ]
+        },
+        {
+          pic:"http://static.gamemm.com/upload/avatar/201909/4/111789_1567573757.jpg",
+          title:"食物卡片",
+          msg: "css js",
+          path:'/foodcard'
+        }]
     };
   },
   components: {},
@@ -73,5 +78,14 @@ ul {
 ul li {
   break-inside: avoid;
   margin: 10px 10px;
+}
+.card-img{
+  width: 150px;
+  height:150px;
+  object-fit: cover;
+  transition: .2s all;
+}
+ul li:hover .card-img{
+  filter: brightness(1.1);
 }
 </style>

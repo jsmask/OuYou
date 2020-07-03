@@ -7,7 +7,7 @@ const Spotlight = () => import('./views/Spotlight.vue');
 const Turncard = () => import('./views/Turncard.vue');
 const Counter = () => import('./views/Counter.vue');
 const Tick = () => import('./views/Tick.vue');
-
+const Foodcard = () => import('./views/Foodcard.vue')
 
 Vue.use(Router)
 
@@ -46,6 +46,11 @@ let router = new Router({
       name:"tick",
       meta:{title:"打勾效果"},
       component:Tick
+    },{
+      path:'/foodcard',
+      name:"foodcard",
+      meta:{title:"食物卡片"},
+      component:Foodcard
     }
   ]
 })
