@@ -164,6 +164,7 @@ export default {
   --z: 150px;
   --x: calc(50%-150px);
   top: 20%;
+  --y: 0;
 }
 
 .card-info {
