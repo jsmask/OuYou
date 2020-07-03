@@ -62,9 +62,7 @@ export default {
       ]
     };
   },
-  mounted () {
-    
-  },
+  mounted() {},
   methods: {
     showPrice(price) {
       let _price = (price + "").split(".");
@@ -123,31 +121,33 @@ export default {
 
 .food-card:nth-of-type(1) {
   top: 34%;
-  --z: 80px;
+  --z: 0px;
   --rx: 60deg;
   --ry: 2deg;
   --r: -45deg;
-  --x: -120px;
-  --y: 20px;
+  --x: -100px;
+  --y: -20px;
   transform: rotateX(var(--rx)) rotate(var(--r)) rotateY(var(--ry))
     translateX(var(--x)) translateY(var(--y)) translateZ(var(--z));
+  z-index: 1;
 }
 
 .food-card:nth-of-type(2) {
   top: 34%;
-  --z: 0px;
+  --z: 1px;
   --rx: 60deg;
   --ry: 0deg;
   --r: -5deg;
   --x: 0px;
-  --y: -60px;
+  --y: -30px;
   transform: rotateX(var(--rx)) rotate(var(--r)) rotateY(var(--ry))
     translateX(var(--x)) translateY(var(--y)) translateZ(var(--z));
+  z-index: 2;
 }
 
 .food-card:nth-of-type(3) {
   top: 34%;
-  --z: 10px;
+  --z: 2px;
   --rx: 60deg;
   --ry: 6deg;
   --r: 15deg;
@@ -155,6 +155,7 @@ export default {
   --y: -10px;
   transform: rotateX(var(--rx)) rotate(var(--r)) rotateY(var(--ry))
     translateX(var(--x)) translateY(var(--y)) translateZ(var(--z));
+  z-index: 3;
 }
 
 .food-card.active {
