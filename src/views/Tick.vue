@@ -11,8 +11,6 @@
         stroke="#8c2"
         :stroke-width="strokeWidth"
         stroke-linecap="round"
-        :stroke-dasharray="dasharray"
-        :stroke-dashoffset="dashoffset"
       />
       <polyline 
          fill="none"
@@ -43,6 +41,7 @@ export default {
       return (this.size - this.strokeWidth) / 2;
     },
     dasharray() {
+      console.log(2 * Math.PI * this.radius)
       return 2 * Math.PI * this.radius;
     },
     dashoffset(){
@@ -87,6 +86,8 @@ export default {
 .circle{
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
+  stroke-dasharray: 597;
+  animation: circleAni .5s linear forwards;
 }
 .btn {
   margin: 30px auto;
@@ -95,9 +96,41 @@ export default {
 .msg{
   font-size: 28px;
   font-family: fantasy,Verdana, Geneva, Tahoma, sans-serif;
-  margin: 20px auto;
+  margin: 15px auto;
+  animation: fadeInDown .5s .6s backwards;
 }
 .tick{
+  stroke-dasharray: 160;
+  stroke-dashoffset: 160;
+  animation: tickAni .3s .5s ease-out forwards;
+}
 
+@keyframes circleAni{
+  0%{
+    stroke-dashoffset: 597;
+  }
+  100%{
+    stroke-dashoffset: 1194;
+  }
+}
+
+@keyframes tickAni{
+  0%{
+    stroke-dashoffset: 160;
+  }
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeInDown{
+  0%{
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 </style>
