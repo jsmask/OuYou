@@ -5,7 +5,7 @@
         <a-card hoverable style="width: 150px;border-radius: 10px;">
           <img slot="cover" :src="item.pic" class="card-img" />
           <a-card-meta :title="item.title">
-            <template slot="description">{{item.msg}}</template>
+            <template slot="description">{{item.desc}}</template>
           </a-card-meta>
         </a-card>
       </li>
@@ -23,46 +23,58 @@ export default {
           pic:
             "http://static.gamemm.com/upload/avatar/201912/30/16201_1577688838.jpg",
           title: "圆环倒计时",
-          msg: "svg css js",
+          desc: "svg css js",
           path: "/circle"
         },
         {
           pic:
             "http://static.gamemm.com/upload/avatar/202004/29/90730_1588098209.jpg",
           title: "聚光灯效果",
-          msg: "css",
+          desc: "css",
           path: "/spotlight"
-        },{
-          pic:"http://static.gamemm.com/upload/avatar/201909/16/124469_1568632555.jpg",
+        },
+        {
+          pic:
+            "http://static.gamemm.com/upload/avatar/201909/16/124469_1568632555.jpg",
           title: "翻牌效果",
-          msg: "css",
+          desc: "css",
           path: "/turncard"
-        },{
-          pic:"http://static.gamemm.com/upload/avatar/202003/24/31496_1585013160.jpg",
+        },
+        {
+          pic:
+            "http://static.gamemm.com/upload/avatar/202003/24/31496_1585013160.jpg",
           title: "滚动计数器",
-          msg: "css js",
+          desc: "css js",
           path: "/counter"
         },
         {
-          pic:"http://static.gamemm.com/upload/avatar/201908/22/87756_1566450714.jpg",
-          title:"打勾效果",
-          msg: "svg css",
-          path:'/tick'
+          pic:
+            "http://static.gamemm.com/upload/avatar/201908/22/87756_1566450714.jpg",
+          title: "打勾效果",
+          desc: "svg css",
+          path: "/tick"
         },
         {
-          pic:"http://static.gamemm.com/upload/avatar/201909/4/111789_1567573757.jpg",
-          title:"食物卡片",
-          msg: "css js",
-          path:'/foodcard'
-        }]
+          pic:
+            "http://static.gamemm.com/upload/avatar/201909/4/111789_1567573757.jpg",
+          title: "食物卡片",
+          desc: "css js",
+          path: "/foodcard"
+        },
+        {
+          pic:
+            "http://static.gamemm.com/upload/avatar/201908/25/83815_1566712590.jpg",
+          title: "折线动画",
+          desc: "svg css js",
+          path: "/brokenline"
+        }
+      ]
     };
   },
   components: {},
   methods: {
     onLink(obj) {
-      this.$store
-      .dispatch('setTitle',obj.title)
-      .then(()=>{});
+      this.$store.dispatch("setTitle", obj.title).then(() => {});
       this.$router.push(obj.path);
     }
   }
@@ -79,13 +91,13 @@ ul li {
   break-inside: avoid;
   margin: 10px 10px;
 }
-.card-img{
+.card-img {
   width: 150px;
-  height:150px;
+  height: 150px;
   object-fit: cover;
-  transition: .2s all;
+  transition: 0.2s all;
 }
-ul li:hover .card-img{
+ul li:hover .card-img {
   filter: brightness(1.1);
 }
 </style>

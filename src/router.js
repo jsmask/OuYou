@@ -7,7 +7,8 @@ const Spotlight = () => import('./views/Spotlight.vue');
 const Turncard = () => import('./views/Turncard.vue');
 const Counter = () => import('./views/Counter.vue');
 const Tick = () => import('./views/Tick.vue');
-const Foodcard = () => import('./views/Foodcard.vue')
+const Foodcard = () => import('./views/Foodcard.vue');
+const Brokenline = ()=> import('./views/Brokenline.vue');
 
 Vue.use(Router)
 
@@ -51,6 +52,11 @@ let router = new Router({
       name:"foodcard",
       meta:{title:"食物卡片"},
       component:Foodcard
+    },{
+      path:"/brokenline",
+      name:"brokenline",
+      meta:{title:"折线动画"},
+      component:Brokenline
     }
   ]
 })
