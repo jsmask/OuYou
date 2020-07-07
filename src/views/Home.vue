@@ -67,6 +67,13 @@ export default {
           title: "折线动画",
           desc: "svg css js",
           path: "/brokenline"
+        },
+        {
+          pic:
+            "http://static.gamemm.com/upload/avatar/201908/22/113157_1566462721.jpg",
+          title: "柴犬动画",
+          desc: "css",
+          path: "/dog"
         }
       ]
     };

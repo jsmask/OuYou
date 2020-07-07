@@ -43,21 +43,21 @@ export default {
           desc: "Matcha Mousse",
           star: 5,
           price: "120",
-          pic: require("../assets/images/food/food_0_0.jpg")
+          pic: require("../../assets/images/food/food_0_0.jpg")
         },
         {
           name: "寿司",
           desc: "Sushi",
           star: 4,
           price: "56",
-          pic: require("../assets/images/food/food_0_1.jpg")
+          pic: require("../../assets/images/food/food_0_1.jpg")
         },
         {
           name: "麻辣小龙虾",
           desc: "Spicy crayfish",
           star: 5,
           price: "88",
-          pic: require("../assets/images/food/food_0_2.jpg")
+          pic: require("../../assets/images/food/food_0_2.jpg")
         }
       ]
     };

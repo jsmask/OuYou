@@ -58,7 +58,7 @@ export default {
   font-family: fantasy;
 }
 .cover {
-  background-image: url("../assets/images/role/role_0_0.png"),
+  background-image: url("../../assets/images/role/role_0_0.png"),
     radial-gradient(
       circle farthest-corner at 108.9% 51.2%,
       rgba(255, 124, 0, 1) 0%,

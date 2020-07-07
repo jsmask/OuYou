@@ -2,13 +2,14 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 const Home = () => import('./views/Home.vue');
-const Circle = () => import('./views/Circle.vue');
-const Spotlight = () => import('./views/Spotlight.vue');
-const Turncard = () => import('./views/Turncard.vue');
-const Counter = () => import('./views/Counter.vue');
-const Tick = () => import('./views/Tick.vue');
-const Foodcard = () => import('./views/Foodcard.vue');
-const Brokenline = ()=> import('./views/Brokenline.vue');
+const Circle = () => import('./views/easy/Circle.vue');
+const Spotlight = () => import('./views/easy/Spotlight.vue');
+const Turncard = () => import('./views/easy/Turncard.vue');
+const Counter = () => import('./views/easy/Counter.vue');
+const Tick = () => import('./views/easy/Tick.vue');
+const Foodcard = () => import('./views/easy/Foodcard.vue');
+const Brokenline = ()=> import('./views/easy/Brokenline.vue');
+const Dog = ()=> import('./views/easy/Dog.vue');
 
 Vue.use(Router)
 
@@ -57,6 +58,11 @@ let router = new Router({
       name:"brokenline",
       meta:{title:"折线动画"},
       component:Brokenline
+    },{
+      path:"/dog",
+      name:"dog",
+      meta:{title:"柴犬动画"},
+      component:Dog
     }
   ]
 })

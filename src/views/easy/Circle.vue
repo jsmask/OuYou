@@ -115,7 +115,7 @@ export default {
   font-family: fantasy;
   font-size: 80px;
   color: rgba(153, 202, 251, 1);
-  -webkit-user-select: none;
+  user-select: none;
 }
 .btn {
   margin-top: 30px;

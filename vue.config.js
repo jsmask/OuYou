@@ -5,5 +5,15 @@ module.exports = {
     assetsDir: "static",
     indexPath: "index.html",
     filenameHashing: true,
-    configureWebpack: {}
+    configureWebpack: {
+        resolve: {
+            alias: {
+                assets: '@/assets',
+                common: '@/common',
+                components: '@/components',
+                network: '@/network',
+                views: '@/views'
+            }
+        }
+    }
 }
