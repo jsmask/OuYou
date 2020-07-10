@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     onBack() {
-      this.$router.replace("/");
+      this.$router.push("/");
     }
   },
   watch: {
