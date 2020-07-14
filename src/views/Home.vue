@@ -14,68 +14,13 @@
 </template>
 
 <script>
+import data from "../../routerData";
+
 export default {
   name: "home",
   data() {
     return {
-      cardList: [
-        {
-          pic:
-            "http://static.gamemm.com/upload/avatar/201912/30/16201_1577688838.jpg",
-          title: "圆环倒计时",
-          desc: "svg css js",
-          path: "/circle"
-        },
-        {
-          pic:
-            "http://static.gamemm.com/upload/avatar/202004/29/90730_1588098209.jpg",
-          title: "聚光灯效果",
-          desc: "css",
-          path: "/spotlight"
-        },
-        {
-          pic:
-            "http://static.gamemm.com/upload/avatar/201909/16/124469_1568632555.jpg",
-          title: "翻牌效果",
-          desc: "css",
-          path: "/turncard"
-        },
-        {
-          pic:
-            "http://static.gamemm.com/upload/avatar/202003/24/31496_1585013160.jpg",
-          title: "滚动计数器",
-          desc: "css js",
-          path: "/counter"
-        },
-        {
-          pic:
-            "http://static.gamemm.com/upload/avatar/201908/22/87756_1566450714.jpg",
-          title: "打勾效果",
-          desc: "svg css",
-          path: "/tick"
-        },
-        {
-          pic:
-            "http://static.gamemm.com/upload/avatar/201909/4/111789_1567573757.jpg",
-          title: "食物卡片",
-          desc: "css js",
-          path: "/foodcard"
-        },
-        {
-          pic:
-            "http://static.gamemm.com/upload/avatar/201908/25/83815_1566712590.jpg",
-          title: "折线动画",
-          desc: "svg css js",
-          path: "/brokenline"
-        },
-        {
-          pic:
-            "http://static.gamemm.com/upload/avatar/201908/22/113157_1566462721.jpg",
-          title: "柴犬动画",
-          desc: "css",
-          path: "/dog"
-        }
-      ]
+      cardList: [...data]
     };
   },
   components: {},

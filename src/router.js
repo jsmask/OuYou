@@ -1,68 +1,50 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-const Home = () => import('./views/Home.vue');
-const Circle = () => import('./views/easy/Circle.vue');
-const Spotlight = () => import('./views/easy/Spotlight.vue');
-const Turncard = () => import('./views/easy/Turncard.vue');
-const Counter = () => import('./views/easy/Counter.vue');
-const Tick = () => import('./views/easy/Tick.vue');
-const Foodcard = () => import('./views/easy/Foodcard.vue');
-const Brokenline = ()=> import('./views/easy/Brokenline.vue');
-const Dog = ()=> import('./views/easy/Dog.vue');
+// const Home = () => import('./views/Home.vue');
+// const Circle = () => import('./views/easy/Circle.vue');
+// const Spotlight = () => import('./views/easy/Spotlight.vue');
+// const Turncard = () => import('./views/easy/Turncard.vue');
+// const Counter = () => import('./views/easy/Counter.vue');
+// const Tick = () => import('./views/easy/Tick.vue');
+// const Foodcard = () => import('./views/easy/Foodcard.vue');
+// const Brokenline = ()=> import('./views/easy/Brokenline.vue');
+// const Dog = ()=> import('./views/easy/Dog.vue');
+// const Notfound = ()=> import('./views/easy/Notfount.vue');
 
 Vue.use(Router)
 
+
+import data from "../routerData";
+
+const handleData = function(data){
+   let list = [];
+
+   data.forEach(item=>{
+      let name = item.path.split("/")[1];
+      let cp = name.charAt(0).toUpperCase()+name.substr(1,name.length-1);
+      list.push({
+        path: item.path,
+        name,
+        meta: { title:item.title },
+        component: () => import(`./views/easy/${cp}.vue`)
+      })
+   })
+
+   return list;
+}
+
 let router = new Router({
   routes: [
+    ...handleData(data),
     {
       path: '/',
       name: 'home',
-      component: Home
-    },
+      component: () => import('./views/Home.vue')
+    }, 
     {
-      path: '/circle',
-      name: 'circle',
-      meta: { title:"圆环倒计时" },
-      component: Circle
-    },
-    {
-      path: '/spotlight',
-      name: 'spotlight',
-      meta: { title:"聚光灯效果" },
-      component: Spotlight
-    },
-    {
-      path: '/turncard',
-      name: 'turncard',
-      meta: { title:"翻牌效果" },
-      component: Turncard
-    },
-    {
-      path: '/counter',
-      name: 'counter',
-      meta: { title:"滚动计数器" },
-      component: Counter
-    },{
-      path:'/tick',
-      name:"tick",
-      meta:{title:"打勾效果"},
-      component:Tick
-    },{
-      path:'/foodcard',
-      name:"foodcard",
-      meta:{title:"食物卡片"},
-      component:Foodcard
-    },{
-      path:"/brokenline",
-      name:"brokenline",
-      meta:{title:"折线动画"},
-      component:Brokenline
-    },{
-      path:"/dog",
-      name:"dog",
-      meta:{title:"柴犬动画"},
-      component:Dog
+      path: '*',
+      redirect: '/notfount'
     }
   ]
 })
