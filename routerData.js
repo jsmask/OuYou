@@ -78,6 +78,13 @@ queue.add({
     desc: "canvas",
     path: "/researcher"
 })
+.add({
+  pic:
+    "http://static.gamemm.com/upload/avatar/202003/12/205351_1584022332.jpg",
+  title: "关键词轮播效果",
+  desc: "css js",
+  path: "/rotateinput"
+})
 
 
 
