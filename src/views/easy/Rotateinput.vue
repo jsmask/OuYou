@@ -6,13 +6,7 @@
       :class="{animate: shouldAnimate}"
       @animationend="animationEnded"
     >
-      <input
-        type="text"
-        v-model="value"
-        :placeholder="placeholder"
-        @focus="isFocusing = true"
-        @blur="isFocusing = false"
-      />
+      <input type="text" v-model="value" :placeholder="placeholder" @focus="onFocus" @blur="onBlur" @keydown="onSearch" />
     </label>
   </div>
 </template>
@@ -21,53 +15,72 @@
 export default {
   data() {
     return {
-      value:"",
-      keywords: ["iPad Pro", "Macbook Pro", "iMac", "iPhone"],
+      value: "",
+      keywords: ["iPhone","iPad","Android","Windows Phone"],
       isFocusing: false,
       currentIndex: 0,
       animationTriggerFlag: false,
-      duration:3000
+      duration: 3000
     };
   },
-  mounted () {
-    //   this.timer = setTimeout(() => {
-    //       this.animationTriggerFlag = true;
-    //   }, this.duration);
+  mounted() {
+    this.play();
   },
   computed: {
     before() {
       let keyword = this.keywords[this.currentIndex];
-      return (this.value!=''||this.isFocusing) ? "" : keyword;
+      return this.value != "" || this.isFocusing ? "" : keyword;
     },
     after() {
       let keyword =
         typeof this.keywords[this.currentIndex + 1] === "undefined"
           ? this.keywords[0]
           : this.keywords[this.currentIndex + 1];
-      return (this.value!=''||this.isFocusing) ? "" : keyword;
+      return this.value != "" || this.isFocusing ? "" : keyword;
     },
     placeholder() {
       let keyword = this.keywords[this.currentIndex];
-      return !(this.value!=''||this.isFocusing) ? "" : keyword;
+      return !(this.value != "" || this.isFocusing) ? "" : keyword;
     },
     shouldAnimate() {
-      return !(this.value!=''||this.isFocusing) && this.animationTriggerFlag;
+      return (
+        !(this.value != "" || this.isFocusing) && this.animationTriggerFlag
+      );
     }
   },
   methods: {
+    play() {
+      this.timer = setTimeout(() => {
+        this.animationTriggerFlag = true;
+      }, this.duration);
+    },
+    onFocus() {
+      this.isFocusing = true;
+      clearTimeout(this.timer);
+      this.timer = null;
+    },
+    onBlur() {
+      this.isFocusing = false;
+      this.play();
+    },
     animationEnded(e) {
       if (e.pseudoElement === "::after") {
         this.animationTriggerFlag = false;
-
         let newIndex =
           typeof this.keywords[this.currentIndex + 1] === "undefined"
             ? 0
             : this.currentIndex + 1;
         this.currentIndex = newIndex;
-
-        setTimeout(() => {
-          this.animationTriggerFlag = true;
-        }, this.duration);
+        this.play();
+      }
+    },
+    onSearch(e){
+      if(e.keyCode == 13){
+          let keyword = this.value == ""?this.keywords[this.currentIndex]:this.value;
+          this.$notification.success({
+            message:keyword
+          })
+          
       }
     }
   }
@@ -103,16 +116,24 @@ label {
 }
 input {
   width: 100%;
-  height: 100%;
+  height: 43px;
   outline: none;
   border: 0;
   padding: 0 0.5em;
   border-radius: 7px;
+  box-sizing: border-box;
   font-family: initial;
   font-size: initial;
   color: #333;
   display: flex;
   align-items: center;
+  margin-top: -1px;
+}
+
+input::placeholder {
+  color: #999;
+  font-family: initial;
+  font-size: initial;
 }
 
 label::before,
