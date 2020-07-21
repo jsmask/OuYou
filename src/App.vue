@@ -5,7 +5,9 @@
         <m-header />
       </a-layout-header>
       <a-layout-content>
-        <router-view />
+        <keep-alive :include="['home']">
+          <router-view />
+        </keep-alive>
       </a-layout-content>
     </a-layout>
   </div>
@@ -19,9 +21,7 @@ export default {
   },
   components: {
     [Header.name]:Header
-  },
-  mounted() {
-  },
+  }
 };
 </script>
 

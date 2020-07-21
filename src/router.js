@@ -40,6 +40,9 @@ let router = new Router({
     {
       path: '/',
       name: 'home',
+      meta:{
+        keyAlive:true
+      },
       component: () => import('./views/Home.vue')
     }, 
     {

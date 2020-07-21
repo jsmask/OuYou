@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" ref="home">
     <ul>
       <li v-for="(item,index) in cardList" :key="index" @click.stop="onLink(item)">
         <a-card hoverable style="width: 150px;border-radius: 10px;">
@@ -20,7 +20,8 @@ export default {
   name: "home",
   data() {
     return {
-      cardList: [...data]
+      cardList: [...data],
+      scrollTop:0
     };
   },
   components: {},
@@ -28,7 +29,17 @@ export default {
     onLink(obj) {
       this.$store.dispatch("setTitle", obj.title).then(() => {});
       this.$router.push(obj.path);
+    },
+    onScroll(){
+      this.scrollTop = document.documentElement.scrollTop;
     }
+  },
+  activated() {
+    document.documentElement.scrollTop = this.scrollTop;
+    document.addEventListener("scroll",this.onScroll);
+  },
+  deactivated() {
+    document.removeEventListener("scroll",this.onScroll);
   }
 };
 </script>

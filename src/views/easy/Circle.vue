@@ -59,9 +59,6 @@ export default {
       return (1 - this.percentage / 100) * this.circumference;
     }
   },
-  mounted() {
-    console.log(this.$store.title);
-  },
   methods: {
     run() {
       this.disabled = true;
