@@ -31,11 +31,11 @@ export default {
       this.$router.push(obj.path);
     },
     onScroll(){
-      this.scrollTop = document.documentElement.scrollTop;
+      this.scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
     }
   },
   activated() {
-    document.documentElement.scrollTop = this.scrollTop;
+    document.documentElement.scrollTop = document.body.scrollTop = this.scrollTop;
     document.addEventListener("scroll",this.onScroll);
   },
   deactivated() {
