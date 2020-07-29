@@ -85,6 +85,13 @@ queue.add({
   desc: "css js",
   path: "/rotateinput"
 })
+.add({
+  pic:
+    "http://static.gamemm.com/upload/avatar/201812/11/43606_1544501375.jpg",
+  title: "平面头像[男]",
+  desc: "css",
+  path: "/man"
+})
 
 
 
