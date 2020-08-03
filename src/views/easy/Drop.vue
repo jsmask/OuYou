@@ -24,7 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: calc(100vh - 64px);
   background-color: #000;
   flex-direction: column;
   filter: contrast(30);
