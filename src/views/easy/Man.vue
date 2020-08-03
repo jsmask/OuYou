@@ -40,7 +40,7 @@
   --eye-color: rgb(37, 35, 35);
   --ear-color: rgb(236, 196, 176);
   --skin-color: rgb(252, 215, 196);
-  --nose-color: rgb(236, 201, 183);
+  --nose-color: rgb(246, 201, 183);
   --rouge-color: rgb(245, 166, 156);
   --mouth-color: rgb(61, 55, 55);
 }
@@ -157,7 +157,7 @@
 .nose {
   width: 16px;
   height: 10px;
-  background-color: var(--nose-color);
+  box-shadow: inset 0 -3px 0 0 var(--nose-color);
   position: absolute;
   left: 50%;
   transform: translateX(-50%);

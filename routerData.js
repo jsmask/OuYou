@@ -92,7 +92,19 @@ queue.add({
   desc: "css",
   path: "/man"
 })
-
-
+.add({
+  pic:
+    "http://static.gamemm.com/upload/avatar/201908/28/110667_1566991919.jpg",
+  title: "水滴充电效果",
+  desc: "css",
+  path: "/drop"
+})
+.add({
+  pic:
+    "http://static.gamemm.com/upload/avatar/202007/13/275322_1594647296.jpg",
+  title: "信封",
+  desc: "css",
+  path: "/envelope"
+})
 
 export default queue.list;
