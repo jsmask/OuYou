@@ -128,7 +128,6 @@ export default {
     z-index: 6;
 }
 .card{
-    /* display: none; */
     width:240px;
     height: 180px;
     background: white;
