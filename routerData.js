@@ -113,4 +113,11 @@ queue.add({
   desc: "css",
   path: "/bear"
 })
+.add({
+  pic:
+    "https://ucavatar2.tuwan.com/data/avatar/003/03/74/79_avatar_large.jpg",
+  title: "太阳加载效果",
+  desc: "css",
+  path: "/sunload"
+})
 export default queue.list;
