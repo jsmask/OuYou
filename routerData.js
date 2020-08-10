@@ -120,4 +120,11 @@ queue.add({
   desc: "css",
   path: "/sunload"
 })
+.add({
+  pic:
+    "http://static.gamemm.com/upload/avatar/202003/10/203822_1583825955.jpg",
+  title: "像素大白",
+  desc: "css",
+  path: "/baymax"
+})
 export default queue.list;
