@@ -33,7 +33,10 @@ export default {
   },
   methods: {
     onBack() {
-      this.$router.push("/");
+      if(window.history.length===1)
+        this.$router.push("/");
+      else 
+        this.$router.back();
     }
   },
   watch: {
