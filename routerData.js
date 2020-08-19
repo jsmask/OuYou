@@ -127,4 +127,11 @@ queue.add({
   desc: "css",
   path: "/baymax"
 })
+.add({
+  pic:
+    "http://static.gamemm.com/upload/avatar/202003/27/201646_1585247588.jpg",
+  title: "日系圆扇",
+  desc: "css",
+  path: "/fan"
+})
 export default queue.list;
