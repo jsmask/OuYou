@@ -134,4 +134,12 @@ queue.add({
   desc: "css",
   path: "/fan"
 })
+.add({
+  pic:
+    "http://static.gamemm.com/upload/avatar/202004/13/26026_1586725021.jpg",
+  title: "狮子",
+  desc: "css",
+  path: "/lion"
+})
+
 export default queue.list;
