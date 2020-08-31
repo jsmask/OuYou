@@ -141,5 +141,11 @@ queue.add({
   desc: "css",
   path: "/lion"
 })
+.add({
+  pic:"http://static.gamemm.com/upload/avatar/201910/9/142582_1570632475.jpg",
+  title:"眨眼密码框",
+  desc:"svg css",
+  path:"/eyepassword"
+})
 
 export default queue.list;
