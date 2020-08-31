@@ -144,7 +144,7 @@ queue.add({
 .add({
   pic:"http://static.gamemm.com/upload/avatar/201910/9/142582_1570632475.jpg",
   title:"眨眼密码框",
-  desc:"svg css",
+  desc:"svg css js",
   path:"/eyepassword"
 })
 
