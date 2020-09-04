@@ -70,8 +70,8 @@
   content: "";
   display: block;
   top: -5px;
-      width: 80px;
-    height: 100px;
+  width: 80px;
+  height: 100px;
   border-radius: 20px;
   position: absolute;
   border: 8px solid var(--main-color);

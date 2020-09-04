@@ -147,5 +147,11 @@ queue.add({
   desc:"svg css js",
   path:"/eyepassword"
 })
+.add({
+  pic:"http://static.gamemm.com/upload/avatar/201908/29/116589_1567064613.jpg",
+  title:"龙珠雷达",
+  desc:"css",
+  path:"/dragon-ball-radar"
+})
 
 export default queue.list;
