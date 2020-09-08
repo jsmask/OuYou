@@ -153,5 +153,11 @@ queue.add({
   desc:"css",
   path:"/dragon-ball-radar"
 })
+.add({
+  pic:"http://static.gamemm.com/upload/avatar/202006/5/269117_1591337435.jpg",
+  title:"龙蛋",
+  desc:"css",
+  path:"/dragon-egg"
+})
 
 export default queue.list;
