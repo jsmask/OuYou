@@ -159,5 +159,12 @@ queue.add({
   desc:"css",
   path:"/dragon-egg"
 })
+.add({
+  pic:"http://static.gamemm.com/upload/avatar/201909/22/131367_1569134371.jpg",
+  title:"鱼塘",
+  desc:"css js",
+  path:"/fish",
+  dir:"normal"
+})
 
 export default queue.list;

@@ -27,7 +27,7 @@ const handleData = function(data){
         path: item.path,
         name,
         meta: { title:item.title },
-        component: () => import(`./views/easy/${cp}.vue`)
+        component: () => import(`./views/${item.dir?item.dir:'easy'}/${cp}.vue`)
       })
    })
 
