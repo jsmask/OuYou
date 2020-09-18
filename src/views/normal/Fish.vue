@@ -183,7 +183,7 @@ export default {
 .main {
   width: 100%;
   height: 100%;
-  background-color: lightblue;
+  background: linear-gradient(180deg, #86defc 0%, #71cceb 20%, #73b2f1, #349ef8 83%, #cce293 93%, #e6cd6a 100%);
   overflow: hidden;
   position: relative;
 }
@@ -203,7 +203,7 @@ export default {
   --main-skin: rgb(230, 90, 72);
 }
 .fish.fish-type3 .fish-body {
-  --main-skin: rgb(72, 127, 230);
+  --main-skin: rgb(91, 142, 238);
 }
 .fish.fish-type4 .fish-body {
   --main-skin: rgb(241, 207, 94);
@@ -212,7 +212,7 @@ export default {
   --main-skin: rgb(82, 151, 100);
 }
 .fish.fish-type6 .fish-body {
-  --main-skin: rgb(82, 120, 151);
+  --main-skin: rgb(255, 117, 117);
 }
 .fish-main {
   transition: 0.3s all;
