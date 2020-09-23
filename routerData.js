@@ -166,5 +166,11 @@ queue.add({
   path:"/fish",
   dir:"normal"
 })
+.add({
+  pic:"http://static.gamemm.com/upload/avatar/201909/17/95309_1568653821.jpg?x-oss-process=image/resize,w_200",
+  title:"波纹",
+  desc:"scss",
+  path:"/moire"
+})
 
 export default queue.list;
