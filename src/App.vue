@@ -2,11 +2,11 @@
   <div id="app">
     <a-layout>
       <a-layout-header>
-        <m-header />
+        <m-header @full="fullScreen" />
       </a-layout-header>
       <a-layout-content>
         <keep-alive :include="['home']">
-          <router-view />
+          <router-view ref="content" />
         </keep-alive>
       </a-layout-content>
     </a-layout>
@@ -21,7 +21,12 @@ export default {
   },
   components: {
     [Header.name]:Header
-  }
+  },
+  methods: {
+    fullScreen(){
+      this.$refs.content.$el.requestFullscreen();
+    }
+  },
 };
 </script>
 

@@ -1,6 +1,6 @@
 <template>
     <div class="main">
-        <div class="egg-container">
+        <div class="egg-container" @click="active=!active" :class="{'active':active}">
             <div class="dragon">
                 <div class="dragon-eye left"></div>
                 <div class="dragon-eye right"></div>
@@ -15,6 +15,15 @@
     </div>
 </template>
 
+<script>
+export default {
+    data(){
+        return {
+            active:false
+        }
+    }
+}
+</script>
 
 <style scoped>
 .main {
@@ -34,6 +43,7 @@
     width: 320px;
     height:320px;
     margin-top: 80px;
+    cursor: pointer;
 }
 .egg-wrapper{
     position: absolute;
@@ -71,12 +81,16 @@
     clip-path: polygon(-35.87% 83.08%,244% 155.05%,108.11% 49.6%,76.11% 57.69%,71.33% 37.01%,44.85% 22.33%,32.41% -13.39%);  
 }
 
-.egg-container:hover .egg-wrapper::before{
+.egg-container:hover .egg-wrapper::before,
+.egg-container.active .egg-wrapper::before{
     transform: translateX(80px) translateY(-80px);
 }
-.egg-container:hover .dragon{
+.egg-container:hover .dragon,
+.egg-container.active .dragon
+{
     transform: translateY(-80px);
 }
+
 .dragon{
     position: relative;
     height: 180px;

@@ -167,10 +167,23 @@ queue.add({
   dir:"normal"
 })
 .add({
-  pic:"http://static.gamemm.com/upload/avatar/201909/17/95309_1568653821.jpg?x-oss-process=image/resize,w_200",
+  pic:"http://static.gamemm.com/upload/avatar/201909/17/95309_1568653821.jpg",
   title:"波纹",
   desc:"scss",
   path:"/moire"
 })
+.add({
+  pic:"http://static.gamemm.com/upload/avatar/202002/28/190165_1582873619.jpg",
+  title:"超级喷火龙Y[卡牌]",
+  desc:"scss",
+  path:"/super-dragon-y"
+})
+.add({
+  pic:"http://static.gamemm.com/upload/avatar/201910/22/74801_1571736628.jpg",
+  title:"波浪",
+  desc:"css",
+  path:"/wave"
+})
+
 
 export default queue.list;

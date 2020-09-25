@@ -7,7 +7,12 @@
       <span>返回</span>
     </div>
 
-    <div class="hd-title">{{title}}</div>
+    
+    <div class="hd-info">
+      <div v-if="!isIos" class="full-btn" @click.stop="onFullScreen">全屏模式</div>
+      <div class="hd-title" v-if="title">{{title}}</div>
+    </div>
+    
   </div>
 </template>
 
@@ -17,21 +22,27 @@ export default {
   data() {
     return {
       isBack: false,
-      title:""
+      title:"",
+      isIos:false
     };
   },
   created() {
-    
     if (this.$route.path === "/") {
       this.isBack = false;
     } else {
       this.isBack = true;
-    }  
+    }
+    if (/iphone|ipad|ipod/.test(navigator.userAgent.toLowerCase())) {
+      this.isIos = true
+    }
   },
   mounted() {
     
   },
   methods: {
+    onFullScreen(){
+      this.$emit('full');
+    },
     onBack() {
       if(window.history.length===1)
         this.$router.push("/");
@@ -67,9 +78,28 @@ export default {
   align-items: center;
   height: 100%;
 }
-.hd-title{
-  color:#ffffff;
+.hd-info{
   position: relative;
   right: -30px;
+  display: flex;
+  align-items: center;
+}
+.hd-title{
+  color:#ffffff;
+  margin-left: 20px;
+  font-size: 12px;
+}
+.full-btn{
+  cursor: pointer;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  height: 32px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-size: 12px;
 }
 </style>
