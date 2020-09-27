@@ -184,6 +184,12 @@ queue.add({
   desc:"css",
   path:"/wave"
 })
+.add({
+  pic:"http://static.gamemm.com/upload/avatar/202008/19/110154_1597769728.jpg",
+  title:"快餐动画",
+  desc:"css",
+  path:"/fast-food"
+})
 
 
 export default queue.list;
