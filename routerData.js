@@ -190,6 +190,14 @@ queue.add({
   desc:"css",
   path:"/fast-food"
 })
+.add({
+  pic:"http://static.gamemm.com/upload/avatar/202005/12/228568_1589270529.jpg",
+  title:"红心动画",
+  desc:"css svg",
+  path:"/heart"
+})
+
+
 
 
 export default queue.list;
