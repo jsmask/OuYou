@@ -196,6 +196,12 @@ queue.add({
   desc:"css svg",
   path:"/heart"
 })
+.add({
+  pic:"http://static.gamemm.com/upload/avatar/201911/22/12366_1574364480.jpg",
+  title:"滑动渐变",
+  desc:"scss vue",
+  path:"/fadingtext"
+})
 
 
 
