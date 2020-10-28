@@ -202,6 +202,12 @@ queue.add({
   desc:"scss vue",
   path:"/fadingtext"
 })
+.add({
+  pic:"http://static.gamemm.com/upload/avatar/202002/8/108881_1581112106.jpg",
+  title:"万圣节",
+  desc:"scss",
+  path:"/halloween"
+})
 
 
 
