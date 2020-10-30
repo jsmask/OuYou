@@ -204,11 +204,16 @@ queue.add({
 })
 .add({
   pic:"http://static.gamemm.com/upload/avatar/202002/8/108881_1581112106.jpg",
-  title:"万圣节",
+  title:"鬼吃糖动画",
   desc:"scss",
   path:"/halloween"
 })
-
+.add({
+  pic:"http://static.gamemm.com/upload/avatar/202002/3/67116_1580675799.jpg",
+  title:"流行盒子",
+  desc:"scss svg",
+  path:"/flybox"
+})
 
 
 

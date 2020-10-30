@@ -325,49 +325,21 @@ $line:rgb(255,178,61);
 }
 
 
-
-
-.star.pointy .star-element {
-    height: 6px;
-    width: 6px;
-}
-.star.pointy .star-element:before {
-    height: 6px;
-    width: 12px;
-    left: -3px;
-    top: 0;
-    -webkit-transform: skewX(60deg);
-    transform: skewX(60deg);
-}
-.star.pointy .star-element:after {
-    height: 12px;
-    width: 6px;
-    right: 0;
-    bottom: -3px;
-    -webkit-transform: skewY(-60deg);
-    transform: skewY(-60deg);
-}
-
 @keyframes twinkle {
   0% {
-    -webkit-transform: rotate(0deg) scale(1, 1);
-            transform: rotate(0deg) scale(1, 1);
+       transform: rotate(0deg) scale(1, 1);
   }
   25% {
-    -webkit-transform: rotate(10deg) scale(0.8, 0.8);
-            transform: rotate(10deg) scale(0.8, 0.8);
+      transform: rotate(10deg) scale(0.8, 0.8);
   }
   50% {
-    -webkit-transform: rotate(0deg) scale(0.9, 0.9);
-            transform: rotate(0deg) scale(0.9, 0.9);
+        transform: rotate(0deg) scale(0.9, 0.9);
   }
   75% {
-    -webkit-transform: rotate(-20deg) scale(0.6, 0.6);
-            transform: rotate(-20deg) scale(0.6, 0.6);
+        transform: rotate(-20deg) scale(0.6, 0.6);
   }
   100% {
-    -webkit-transform: rotate(0deg) scale(1, 1);
-            transform: rotate(0deg) scale(1, 1);
+        transform: rotate(0deg) scale(1, 1);
   }
 }
 
